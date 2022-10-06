@@ -20,7 +20,7 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/indices/**, 
-        - id: video processing
+        - id: video
           uri: http://localhost:8084
           predicates:
             - Path=/videos/**, 
@@ -63,8 +63,8 @@ spring:
           uri: http://indexer:8080
           predicates:
             - Path=/indices/**, 
-        - id: video processing
-          uri: http://videoProcessing:8080
+        - id: video
+          uri: http://video:8080
           predicates:
             - Path=/videos/**, 
         - id: notification

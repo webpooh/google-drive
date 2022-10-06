@@ -1,7 +1,7 @@
 package google.drive.domain;
 
 import google.drive.domain.VideoProcessed;
-import google.drive.VideoProcessingApplication;
+import google.drive.VideoApplication;
 import javax.persistence.*;
 import java.util.List;
 import lombok.Data;
@@ -45,7 +45,7 @@ public class Video  {
     }
 
     public static VideoRepository repository(){
-        VideoRepository videoRepository = VideoProcessingApplication.applicationContext.getBean(VideoRepository.class);
+        VideoRepository videoRepository = VideoApplication.applicationContext.getBean(VideoRepository.class);
         return videoRepository;
     }
 

@@ -1,6 +1,6 @@
 package google.drive.infra;
 
-import google.drive.VideoProcessingApplication;
+import google.drive.VideoApplication;
 import google.drive.config.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +32,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = VideoProcessingApplication.applicationContext.getBean(
+        KafkaProcessor processor = VideoApplication.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

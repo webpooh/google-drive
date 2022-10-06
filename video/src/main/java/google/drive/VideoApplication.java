@@ -10,9 +10,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableBinding(KafkaProcessor.class)
 @EnableFeignClients
-public class VideoProcessingApplication {
+public class VideoApplication {
     public static ApplicationContext applicationContext;
     public static void main(String[] args) {
-        applicationContext = SpringApplication.run(VideoProcessingApplication.class, args);
+        applicationContext = SpringApplication.run(VideoApplication.class, args);
     }
 }

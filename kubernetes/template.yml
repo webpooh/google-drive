@@ -123,22 +123,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: video processing
+  name: video
   labels:
-    app: video processing
+    app: video
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: video processing
+      app: video
   template:
     metadata:
       labels:
-        app: video processing
+        app: video
     spec:
       containers:
-        - name: video processing
-          image: username/video processing:latest
+        - name: video
+          image: username/video:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -256,15 +256,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: video processing
+  name: video
   labels:
-    app: video processing
+    app: video
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: video processing
+    app: video
 
 
 ---

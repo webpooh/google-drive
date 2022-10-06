@@ -1,12 +1,12 @@
 package google.drive.common;
 
 
-import google.drive.VideoProcessingApplication;
+import google.drive.VideoApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = { VideoProcessingApplication.class })
+@SpringBootTest(classes = { VideoApplication.class })
 public class CucumberSpingConfiguration {
     
 }
